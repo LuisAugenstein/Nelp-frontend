@@ -1,0 +1,118 @@
+$main_color: #70a1ff;
+$highlight-color: #588ceb;
+$text-color: aliceblue;
+
+.root-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-controller {
+  display: flex;
+  width: 350px;
+  height: 35px;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+.controller {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.selected-controller {
+  border-bottom: 2px solid $main_color;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+  border-radius: 6px;
+  padding: 25px;
+}
+
+.header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  border-bottom: 2px solid $main_color;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.login-input {
+  height: 2.1em;
+  border-radius: 5px;
+  border: 1px solid $main_color;
+  padding: 0px 7px;
+  font-size: 19px;
+  color: #3e3e42;
+  background: rgba(15, 15, 15, 0.01);
+}
+
+.login-input:focus {
+  border: 1px solid $highlight-color;
+  box-shadow: 0px 0px 20px rgba(15, 15, 15, 0.2);
+}
+
+.login-input::placeholder {
+  font-size: 16px;
+  color: rgba(15, 15, 15, 0.4);
+}
+
+.login-btn {
+  border: none;
+  background: $main_color;
+  color: $text-color;
+  font-size: 18px;
+  height: 30px;
+  width: 170px;
+  align-self: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #417cef;
+  color: white;
+}
+
+.danger-error {
+  color: #e74c3c;
+  font-size: 16px;
+}
+
+.registered-msg {
+  color: green;
+}
+
+@media (min-width: 601px) {
+  .box-controller {
+    width: 400px;
+  }
+
+  .box-container {
+    width: 350px;
+  }
+}
